@@ -1,4 +1,5 @@
 #include "AppDelegate.h"
+#include "FirstScene.h"
 
 USING_NS_CC;
 
@@ -18,6 +19,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     director->setAnimationInterval(1.0 / 60);
+
+    auto scene = FirstScene::createScene();
+    director->runWithScene(scene);
 
     return true;
 }
